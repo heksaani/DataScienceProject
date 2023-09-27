@@ -14,7 +14,8 @@ Used datasets:
 
 ## Preprocessing
 We used the following preprocessing steps:
-    -
-    -
-    -
+<br>
+-
+-
+-
 ## Instructions
