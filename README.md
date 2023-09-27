@@ -7,9 +7,9 @@ Our task was to come up with inspiring idea to get familiar with different aspec
 
 ## Data
 Used datasets: 
-[Kaggle Sleep Health Datase ](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset/data)
-[Boston College COVID-19 Sleep and Well-Being Dataset](https://osf.io/gpxwa/?view_only=) 
-[FSD2326 University Student Health Survey 2004](https://urn.fi/urn:nbn:fi:fsd:T-FSD2326)
+[Kaggle Sleep Health Datase ](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset/data) <br>
+[Boston College COVID-19 Sleep and Well-Being Dataset](https://osf.io/gpxwa/?view_only=) <br>
+[FSD2326 University Student Health Survey 2004](https://urn.fi/urn:nbn:fi:fsd:T-FSD2326) <br>
 
 ## Preprocessing
 We used the following preprocessing steps:
