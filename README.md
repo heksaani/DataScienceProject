@@ -12,10 +12,5 @@ Used datasets:
 - [Boston College COVID-19 Sleep and Well-Being Dataset](https://osf.io/gpxwa/?view_only=) <br>
 - [FSD2326 University Student Health Survey 2004](https://urn.fi/urn:nbn:fi:fsd:T-FSD2326) <br>
 
-## Preprocessing
-We used the following preprocessing steps:
-<br>
--
--
--
+
 ## Instructions
