@@ -14,13 +14,11 @@ Used datasets:
 
 ## Instructions
 1. Clone this repository to your computer
-# command line
 ```bash
 git clone https://github.com/heksaani/DataScienceProject.git
 cd DataScienceProject
 ```
 2. Install the required packages
-# command line
 ```bash
 pip install -r requirements.txt
 ```
