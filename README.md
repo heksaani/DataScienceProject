@@ -8,9 +8,19 @@ Our task was to come up with inspiring idea to get familiar with different aspec
 ## Data
 Used datasets:
 <br>
-- [Kaggle Sleep Health Datase ](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset/data) <br>
 - [Boston College COVID-19 Sleep and Well-Being Dataset](https://osf.io/gpxwa/?view_only=) <br>
 - [FSD2326 University Student Health Survey 2004](https://urn.fi/urn:nbn:fi:fsd:T-FSD2326) <br>
 
 
 ## Instructions
+1. Clone this repository to your computer
+# command line
+```bash
+git clone https://github.com/heksaani/DataScienceProject.git
+cd DataScienceProject
+```
+2. Install the required packages
+# command line
+```bash
+pip install -r requirements.txt
+```
