@@ -18,7 +18,16 @@ Used datasets:
 git clone https://github.com/heksaani/DataScienceProject.git
 cd DataScienceProject
 ```
-2. Install the required packages
+2. Install the required packages and activate the environment
 ```bash
+conda create --name <env>
+conda activate <env>
 pip install -r requirements.txt
+```
+
+```
+
+
+
+conda install --file requirements.txt
 ```
