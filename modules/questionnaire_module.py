@@ -30,7 +30,7 @@ def on_button_click(b):
 questions = {
     "Name": {"type": widgets.Text, "options": {}, "label": "Name:"},
     "Age": {"type": widgets.IntText, "options": {"min":0}, "label": "Age:"},
-    "Hours slept": {"type": widgets.FloatText, "options": {"min": 0.0}, "label": "Hours slept on average a night:"},
+    "Sleeptime (h)": {"type": widgets.FloatText, "options": {"min": 0.0}, "label": "Hours slept on average a night:"},
     "Latency": {"type": widgets.IntText, "options": {"min": 0}, "label": "How long does it take you to fall asleep in minutes?:", "parse_func": parse_value},
     "Restfulness": {"type": widgets.Dropdown, "options": {"options": ["1: Yes, almost always", "2: Yes, often", "3: Rarely, or almost never"]}, "label": "Do you feel rested when you wake up in the morning?:", "parse_func": parse_value},
     "Wakes": {"type": widgets.Dropdown, "options": {"options": ["0", "1", "2", "3", "4", "5 or more"]}, "label": "How many times do you wake up during the night?:", "parse_func": parse_value},
@@ -67,13 +67,13 @@ for key, question in questions.items():
     widgets_dict[key] = widget
     lw = labeled_widget(widget_label, widget)
     all_widgets.append(lw)
-    spacer = widgets.Label(value='', layout=Layout(height='5px'))  # Empty label acting as spacer
+    spacer = widgets.Label(value='', layout=Layout(height='5px'))
     all_widgets.append(spacer)  # Add spacer to list
 
 button = widgets.Button(description="Submit")
 button.on_click(on_button_click)
 
-all_widgets.append(button)  # Add submit button to the end
+all_widgets.append(button)
 display(VBox(all_widgets)) 
 
 def get_data():

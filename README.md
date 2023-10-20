@@ -24,10 +24,8 @@ conda create --name <env>
 conda activate <env>
 pip install -r requirements.txt
 ```
-
-```
-
-
-
-conda install --file requirements.txt
+3. Run the notebook
+This command will launch the Jupyter Notebook App and open this project in your browser.
+```bash
+jupyter notebook
 ```
