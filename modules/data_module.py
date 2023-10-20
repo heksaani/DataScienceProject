@@ -4,12 +4,7 @@
 This is a module for the data in the interactive Jupyternotebook.
 """
 import matplotlib.pyplot as plt
-import ipywidgets as widgets
 import pandas as pd
-import numpy as np
-import seaborn as sns
-import pickle
-import questionnaire_module as qm
 
 data = pd.read_csv("./data/data_combined_final.csv")
 
