@@ -64,7 +64,7 @@ questions = {
 special_parsing = {
     "Sleep quality": parse_value,
     "Stress": parse_value,
-    "Food": parse_value,
+    "Food Healthiness": parse_value,
     "Wakes": parse_value,
     "Restfulness": parse_value,
     "Exercise scale": parse_value,
