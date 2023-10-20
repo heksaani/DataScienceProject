@@ -1,4 +1,4 @@
-# PROJECT NAME HERE 
+# HealthNotebook
 
 This is a joint project created by [Heidi](https://github.com/heksaani), [Lotta](https://github.com/LottaPol) and [Tatu](https://github.com/tlinnala) for the course [Introduction to Data Science](https://studies.helsinki.fi/kurssit/opintojakso/hy-CU-118209216-2021-08-01) at the University of Helsinki.
 
@@ -29,3 +29,5 @@ This command will launch the Jupyter Notebook App and open this project in your 
 ```bash
 jupyter notebook
 ```
+When using the notebook you can run the cells by pressing the play button or by pressing shift + enter. <br>
+We recommend you to run the cells one by one and fille the qustions and remember to push the button 'Submit' after filling the question boxes. <br>

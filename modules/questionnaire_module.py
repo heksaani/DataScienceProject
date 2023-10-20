@@ -25,6 +25,20 @@ def on_button_click(b):
         if key in special_parsing:
             data[key] = special_parsing[key](widget.value)
         else:
+            if key =='Age':
+                # put the age into the categorical group
+                if widget.value < 21:
+                    data[key] = 1
+                elif widget.value >= 21 and widget.value <= 24:
+                    data[key] = 2
+                elif widget.value >= 25 and widget.value <= 29:
+                    data[key] = 3
+                elif widget.value >= 30 and widget.value <= 34:
+                    data[key] = 4
+                elif widget.value > 34:
+                    data[key] = widget.value
+
+
             data[key] = widget.value
 
 questions = {
@@ -36,7 +50,7 @@ questions = {
     "Wakes": {"type": widgets.Dropdown, "options": {"options": ["0", "1", "2", "3", "4", "5 or more"]}, "label": "How many times do you wake up during the night?:", "parse_func": parse_value},
     "Stress": {"type": widgets.Dropdown, "options": {"options": ["1: Not stressed at all", "2", "3", "4", "5", "6", "7: Consumed by stress"]}, "label": "Stress, on a scale from 1 to 7:", "parse_func": parse_value},
     "Steps": {"type": widgets.IntText, "options": {"min": 0}, "label": "Daily steps:"},
-    "Food" : {"type": widgets.Dropdown, "options": {"options": ["1: Never" , "2: Yes, sometimes", "3: Often"]}, "label": "When buying/acquiring food, do you take health factors into account?:", "parse_func": parse_value},
+    "Food Healthiness" : {"type": widgets.Dropdown, "options": {"options": ["1: Never" , "2: Yes, sometimes", "3: Often"]}, "label": "When buying/acquiring food, do you take health factors into account?:", "parse_func": parse_value},
     "Exercise scale" : {"type": widgets.Dropdown, "options": {"options":  ['0: Not at all or very seldom',
                                                                            "1: 1-3 times a month",
                                                                            "2: Roughly once a week",
@@ -68,7 +82,7 @@ for key, question in questions.items():
     lw = labeled_widget(widget_label, widget)
     all_widgets.append(lw)
     spacer = widgets.Label(value='', layout=Layout(height='5px'))
-    all_widgets.append(spacer)  # Add spacer to list
+    all_widgets.append(spacer) 
 
 button = widgets.Button(description="Submit")
 button.on_click(on_button_click)

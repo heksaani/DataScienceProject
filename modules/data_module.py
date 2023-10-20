@@ -18,11 +18,6 @@ def get_data():
     """Function to get the data."""
     return data
 
-
-def get_column_names():
-    """Function to get the column names."""
-    return data.columns.values.tolist()
-
 def get_user_feedback(user_value, data, variable):
     """This functions return the user feedback when comparing the user input data to the data in the dataset"""
     if user_value < data[variable].mean():
@@ -32,9 +27,6 @@ def get_user_feedback(user_value, data, variable):
     else:
         feedback = f"You have a higher value than the average person. \n The difference is {round(user_value - data[variable].mean(), 2)}."
     return feedback
-
-
-
 
 def plot(dataset, userdata, plotted_variables):
     """Function to plot a scatterplot of the data  with the input of the user
@@ -61,28 +53,31 @@ def plot(dataset, userdata, plotted_variables):
         plt.xlabel(' ')
         plt.xticks([])
         plt.ylabel(plotted_variables[0])
-        
+
         plt.scatter(x_data, y_data, color='pink', marker='o', s=100, alpha=0.5, label='Data')
         plt.scatter([x_user], [y_user], color='purple', marker='o', s=100, label=userdata['Name'])
-        plt.axhline(y=y_data.mean(), color='black', linestyle='--', label='Average Sleep Hours')
+        plt.axhline(y=y_data.mean(), color='black', linestyle='--', label=f"Average {plotted_variables[0]}")
         y_min, y_max = plt.ylim()
         x_min, x_max = plt.xlim()
         feedback = get_user_feedback(userdata[plotted_variables[0]], dataset, plotted_variables[0])
-        plt.text(x_min + 0.8*(x_max-x_min), y_min + 0.4*(y_max-y_min), feedback, fontsize = 10)
+        plt.text(x_min + 0.56*(x_max-x_min), y_min + 0.4*(y_max-y_min), feedback, fontsize = 10)
         plt.legend()
     # if the plotted is two variables the x-axis and y-axis have values and value names
     else:
         plt.figure(figsize=(10, 6))
 
-
         plt.xlabel(plotted_variables[0])
         plt.ylabel(plotted_variables[1])
-
 
         plt.scatter(x_data, y_data, color='pink', marker='o', s=100, alpha=0.5, label='Data')
         plt.scatter([x_user], [y_user], color='purple', marker='o', s=100, label=userdata['Name'])
         plt.axhline(y=y_data.mean(), color='black', linestyle='--', label= f"Average {plotted_variables[1]} " )
-    
-    #plotting the feedback
-    y_min, y_max = plt.ylim()
-    x_min, x_max = plt.xlim()
+        #plt.axvline(x=x_data.mean(), color='black', linestyle='--', label= f"Average {plotted_variables[0]}")
+        y_min, y_max = plt.ylim()
+        x_min, x_max = plt.xlim()
+        feedback_x = get_user_feedback(userdata[plotted_variables[0]], dataset, plotted_variables[0])
+        feedback_y = get_user_feedback(userdata[plotted_variables[1]], dataset, plotted_variables[1])
+        #plt.text(x_min + 0.56*(x_max-x_min), y_min + 0.4*(y_max-y_min), feedback_x, fontsize = 10)
+        plt.text(x_min + 0.56*(x_max-x_min), y_min + 0.3*(y_max-y_min), feedback_y, fontsize = 10)
+        plt.legend()
+
