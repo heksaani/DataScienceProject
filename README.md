@@ -3,7 +3,7 @@
 This is a joint project created by [Heidi](https://github.com/heksaani), [Lotta](https://github.com/LottaPol) and [Tatu](https://github.com/tlinnala) for the course [Introduction to Data Science](https://studies.helsinki.fi/kurssit/opintojakso/hy-CU-118209216-2021-08-01) at the University of Helsinki.
 
 ## Project description
-Our task was to come up with inspiring idea to get familiar with different aspects of data science. We came with idea of creating a interactive jupyter notebook, since the time is limited. This could be further developed into a web and/or mobile application.
+Our task was to come up with an inspiring idea to get familiar with different aspects of data science. We decided to create HealthNotebook, which analyses data given by the user and recommends ways to improve sleep. We decided to create an interactive Jupyter notebook since the time was limited. This could be further developed into a web and/or mobile application.
 
 ## Data
 Used datasets:
@@ -18,16 +18,14 @@ Used datasets:
 git clone https://github.com/heksaani/DataScienceProject.git
 cd DataScienceProject
 ```
-2. Install the required packages and activate the environment
+2. If you wish, you can install the required packages using the requirements.txt file
 ```bash
-conda create --name <env>
-conda activate <env>
 pip install -r requirements.txt
 ```
-3. Run the notebook
-This command will launch the Jupyter Notebook App and open this project in your browser.
+3. Launch the Jupyter notebook and open this project in your browser.
 ```bash
 jupyter notebook
 ```
-When using the notebook you can run the cells by pressing the play button or by pressing shift + enter. <br>
-We recommend you to run the cells one by one and fille the qustions and remember to push the button 'Submit' after filling the question boxes. <br>
+When using the notebook you can run the cells by pressing the play button or by pressing shift + enter. We recommend that you run the cells one by one and fill in the questions. Also, remember to push the button 'Submit' after filling in the question boxes. <br>
+<br>
+NOTE: if you are having trouble loading the regression models with Pickle, try running the following files to recreate the models: `analysis/linear_regression_covid19_dataset.ipynb` and `analysis/linear_regression_uhs_dataset.ipynb`.
