@@ -18,8 +18,11 @@ Used datasets:
 git clone https://github.com/heksaani/DataScienceProject.git
 cd DataScienceProject
 ```
-2. If you wish, you can install the required packages using the requirements.txt file
+2. If you wish, you can create a virtual environment (and install `pip`) and then install the required packages using the requirements.txt file
 ```bash
+conda create --name ds-project
+conda activate ds-project
+conda install pip
 pip install -r requirements.txt
 ```
 3. Launch the Jupyter notebook and open this project in your browser.
@@ -28,4 +31,4 @@ jupyter notebook
 ```
 When using the notebook you can run the cells by pressing the play button or by pressing shift + enter. We recommend that you run the cells one by one and fill in the questions. Also, remember to push the button 'Submit' after filling in the question boxes. <br>
 <br>
-NOTE: if you are having trouble loading the regression models with Pickle, try running the following files to recreate the models: `analysis/linear_regression_covid19_dataset.ipynb` and `analysis/linear_regression_uhs_dataset.ipynb`.
+NOTE: if you are having trouble loading the regression models with `pickle`, try running the following files to recreate the models: `analysis/linear_regression_covid19_dataset.ipynb` and `analysis/linear_regression_uhs_dataset.ipynb`.
